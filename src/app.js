@@ -21,7 +21,19 @@ window.onload = function() {
     "while I was praying"
   ];
 
-  let excuse = who[0] + " " + action[0] + " " + what[0] + " " + when[0];
+  //create random number for each element
+  function getRandom(anArray) {
+    let myRandom = Math.floor(Math.random() * anArray.length);
+    return anArray[myRandom];
+  }
+  let excuse =
+    getRandom(who) +
+    " " +
+    getRandom(action) +
+    " " +
+    getRandom(what) +
+    " " +
+    getRandom(when);
   document.getElementById("excuse").innerHTML = excuse;
   console.log(excuse);
 };
